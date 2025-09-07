@@ -42,6 +42,8 @@ global_agriculture/
 ```bash
 git clone https://github.com/Susovan700/global_agriculture.git
 cd global_agriculture
+jupyter notebook preprocess.ipynb
+
 2️⃣ Run preprocessing (if not using saved `.npy` files):  
 ```bash
 jupyter notebook preprocess.ipynb
