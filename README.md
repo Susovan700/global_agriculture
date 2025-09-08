@@ -26,12 +26,14 @@ This project leverages **AI/ML techniques** to contribute towards **sustainable 
 ## 📁 Project Structure  
 global_agriculture/
 │
-├── preprocess.ipynb        # Jupyter notebook with preprocessing pipeline
-├── X_train.npy             # Preprocessed training images
-├── X_test.npy              # Preprocessed testing images
-├── y_train.npy             # One-hot encoded training labels
-├── y_test.npy              # One-hot encoded testing labels
-└── README.md               # Documentation
+├── preprocess.ipynb              # Jupyter notebook with preprocessing pipeline  
+├── X_train.npy                   # Preprocessed training images  
+├── X_test.npy                    # Preprocessed testing images  
+├── y_train.npy                   # One-hot encoded training labels  
+├── y_test.npy                    # One-hot encoded testing labels  
+├── task2_training.ipynb          # Model training + evaluation + charts  
+├── linear_regression_model.pkl   # Saved ML model  
+└── README.md                     # Documentation  
 
 
 
@@ -53,4 +55,20 @@ X_train = np.load("X_train.npy")
 X_test  = np.load("X_test.npy")
 y_train = np.load("y_train.npy")
 y_test  = np.load("y_test.npy")
+4️⃣ Load pre-trained model:
+
+import joblib
+model = joblib.load("linear_regression_model.pkl")
+
+
+## 🤖 Model Training  
+- Implemented **Linear Regression** to analyze climate–agriculture relationships.  
+- Evaluated performance using **MSE, R², and visualization charts**.  
+- Model saved as `linear_regression_model.pkl` for reuse.  
+
+### 📊 Charts & Visualizations  
+- Correlation heatmap between climate factors and yield  
+- Line plots of predicted vs. actual yields  
+- Bar graph showing feature importance  
+- Pie chart distribution of healthy vs. diseased samples  
 
